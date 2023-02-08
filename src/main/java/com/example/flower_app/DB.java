@@ -35,7 +35,7 @@ public class DB {
         ResultSet resultSet = preparedStatement.executeQuery();
         if ( !(resultSet.next()) ) {
             ScriptRunner sr = new ScriptRunner(connection);
-            Reader reader = new BufferedReader(new FileReader("backup.sql"));
+            Reader reader = new BufferedReader(new FileReader("src/main/resources/backup.sql"));
             sr.runScript(reader);
         }
     }
