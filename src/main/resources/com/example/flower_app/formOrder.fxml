@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #f159ff;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.flower_app.formOrder">
+    <children>
+        <Label layoutX="93.0" layoutY="14.0" text="Формирование заказа">
+            <font>
+                <Font name="Calibri Bold" size="24.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="orderId" layoutX="125.0" layoutY="57.0" promptText="ID"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <TextField fx:id="orderDate" layoutX="125.0" layoutY="92.0" promptText="Дата Заказа"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <TextField fx:id="orderTimeDate" layoutX="126.0" layoutY="130.0" promptText="Время Заказа"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <TextField fx:id="orderClientId" layoutX="125.0" layoutY="173.0" promptText="ID клиента"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <TextField fx:id="orderServiceId" layoutX="125.0" layoutY="211.0" promptText="ID услуги"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <Button fx:id="orderBtn" layoutX="111.0" layoutY="282.0" mnemonicParsing="false" onAction="#formOrder"
+                prefHeight="25.0" prefWidth="149.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Сформировать" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Label fx:id="orderLabel" contentDisplay="CENTER" layoutX="111.0" layoutY="254.0" prefHeight="20.0"
+               prefWidth="200.0" textFill="RED">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Canvas fx:id="canvas" height="150.0" layoutX="161.0" layoutY="376.0" width="100.0"/>
+        <Button fx:id="codeBtn" layoutX="96.0" layoutY="331.0" mnemonicParsing="false" onAction="#loadCode"
+                prefHeight="36.0" prefWidth="229.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Сформировать штрих-код" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="pdf1" layoutX="102.0" layoutY="550.0" mnemonicParsing="false" onAction="#pdf" prefHeight="36.0"
+                prefWidth="229.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Скачать штрих-код" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Label fx:id="savePdf" layoutX="163.0" layoutY="526.0" text="Штрих-код скачан" textFill="#379752"
+               visible="false">
+            <font>
+                <Font name="Calibri" size="14.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

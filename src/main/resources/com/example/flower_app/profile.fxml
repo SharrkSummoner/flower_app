@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color: #f159ff; -fx-border-color: #000; -fx-border-radius: 10px;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.flower_app.Profile">
+    <children>
+        <Label layoutX="353.0" layoutY="33.0" text="Профиль" textFill="#202020">
+            <font>
+                <Font name="Calibri Bold" size="24.0"/>
+            </font>
+        </Label>
+        <ImageView fx:id="photo" fitHeight="250.0" fitWidth="250.0" layoutX="500.0" layoutY="80.0" pickOnBounds="true"
+                   preserveRatio="true"/>
+        <Text fx:id="textHi" layoutX="80.0" layoutY="100.0" text="Пользователь:">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Text>
+        <Text fx:id="doljnost" layoutX="80.0" layoutY="150.0" text="Должность:">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Text>
+        <Button fx:id="registerBtn" layoutX="80.0" layoutY="250.0" mnemonicParsing="false" onAction="#clientRegister"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="Регистрация нового клиента" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="serviceBtn" layoutX="80.0" layoutY="200.0" mnemonicParsing="false" onAction="#addService"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="Добавить новую услугу" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="formOrder" layoutX="80.0" layoutY="200.0" mnemonicParsing="false" onAction="#formOrder"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="Сформировать заказ" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="enterOrder" layoutX="80.0" layoutY="200.0" mnemonicParsing="false" onAction="#enterOrder"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="Принять заказ" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="EmployeeBtn" layoutX="80.0" layoutY="300.0" mnemonicParsing="false" onAction="#addEmployee"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="Добавить нового работника" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="ClientBtn" layoutX="80.0" layoutY="300.0" mnemonicParsing="false" onAction="#showClients"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="Посмотреть клиентов" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="history" layoutX="80.0" layoutY="350.0" mnemonicParsing="false" onAction="#history"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="История входа" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="showEmp" layoutX="80.0" layoutY="400.0" mnemonicParsing="false" onAction="#showEmp"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 250px;"
+                text="Посмотреть работников" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button layoutX="351.0" layoutY="510.0" mnemonicParsing="false" onAction="#exit"
+                style="-fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px; -fx-min-width: 100px;"
+                text="Выход" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="24.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

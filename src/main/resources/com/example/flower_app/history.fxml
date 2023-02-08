@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f159ff;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.flower_app.History">
+    <children>
+        <TableView fx:id="tableView" layoutY="31.0" prefHeight="306.0" prefWidth="600.0"
+                   style="-fx-background-color: #FFFF73;">
+            <columns>
+                <TableColumn fx:id="tableColumn1" prefWidth="298.0" text="ФИО"/>
+                <TableColumn fx:id="tableColumn2" prefWidth="301.0" text="Дата последнего Входа"/>
+            </columns>
+        </TableView>
+        <Label layoutX="90.0" layoutY="0.0" prefHeight="23.0" prefWidth="426.0"
+               text="Просмотр работников по истории входа">
+            <font>
+                <Font name="Calibri Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Button fx:id="otchetBtn" layoutX="14.0" layoutY="337.0" mnemonicParsing="false" onAction="#formOtchet"
+                prefHeight="25.0" prefWidth="149.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Сформировать отчет" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="saveBtn" layoutX="386.0" layoutY="337.0" mnemonicParsing="false" onAction="#saveOtchet"
+                prefWidth="149.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Скачать отчет" textFill="WHITE" visible="false">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Label fx:id="statusOtchet" layoutX="244.0" layoutY="347.0" text="Отчет сформирован" textFill="#3fa655"
+               visible="false">
+            <font>
+                <Font name="Calibri" size="14.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #f159ff;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.flower_app.showEmployee">
+    <children>
+        <Label layoutX="300.0" layoutY="0.0" text="Просмотр работников">
+            <font>
+                <Font name="Calibri Bold" size="24.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="tableViewEmp" layoutY="27.0" prefHeight="306.0" prefWidth="800.0"
+                   style="-fx-background-color: #FFFF73;">
+            <columns>
+                <TableColumn fx:id="tableColumnId" prefWidth="42.0" text="id"/>
+                <TableColumn fx:id="tableColumnFIO" prefWidth="145.0" text="ФИО"/>
+                <TableColumn fx:id="tableColumnPost" prefWidth="102.0" text="Должность"/>
+                <TableColumn fx:id="tableColumnAddress" prefWidth="147.0" text="Адресс"/>
+                <TableColumn fx:id="tableColumnBirthday" prefWidth="97.0" text="Дата рождения"/>
+                <TableColumn fx:id="tableColumnLogin" prefWidth="71.0" text="Логин"/>
+                <TableColumn fx:id="tableColumnPassword" prefWidth="70.0" text="Пароль"/>
+                <TableColumn fx:id="tableColumnEnter" prefWidth="125.0" text="Последний вход"/>
+            </columns>
+        </TableView>
+        <Button fx:id="otchetBtn" layoutX="100.0" layoutY="337.0" mnemonicParsing="false" onAction="#formOtchet"
+                prefHeight="25.0" prefWidth="149.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Сформировать отчет" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="saveBtn" layoutX="500.0" layoutY="337.0" mnemonicParsing="false" onAction="#saveOtchet"
+                prefWidth="149.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Скачать отчет" textFill="WHITE" visible="false">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Label fx:id="statusOtchet" layoutX="344.0" layoutY="347.0" text="Отчет сформирован" textFill="#3fa655"
+               visible="false">
+            <font>
+                <Font name="Calibri" size="14.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

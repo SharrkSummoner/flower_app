@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #f159ff;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.flower_app.AddService">
+    <children>
+        <Label layoutX="90.0" layoutY="14.0" text="Добавление Услуги">
+            <font>
+                <Font name="Calibri Bold" size="24.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="serviceId" layoutX="125.0" layoutY="120.0" prefHeight="28.0" prefWidth="151.0" promptText="ID"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <TextField fx:id="serviceTitle" layoutX="125.0" layoutY="179.0" prefHeight="28.0" prefWidth="151.0"
+                   promptText="Название"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <TextField fx:id="servicePrice" layoutX="126.0" layoutY="241.0" prefHeight="28.0" prefWidth="151.0"
+                   promptText="Стоимость"
+                   style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px;"/>
+        <Button fx:id="addBtn" layoutX="101.0" layoutY="321.0" mnemonicParsing="false" onAction="#addService"
+                prefHeight="25.0" prefWidth="149.0"
+                style="-fx-min-width: 200px; -fx-background-color: #202020; -fx-border-color: #000; -fx-border-radius: 10px;"
+                text="Добавить" textFill="WHITE">
+            <font>
+                <Font name="Calibri" size="18.0"/>
+            </font>
+        </Button>
+        <Label fx:id="serviceLabel" contentDisplay="CENTER" layoutX="101.0" layoutY="289.0" prefHeight="20.0"
+               prefWidth="200.0" textFill="RED">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
